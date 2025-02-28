@@ -1,11 +1,10 @@
 import {Checkbox, ListItemIcon} from "@mui/material";
-import {useTaskContext} from "../contexts/TaskContext.jsx";
 
 export const CheckToggle = ({task}) => {
-  const {updateTask} = useTaskContext()
+  // const {updateTask} = useTaskContext()
 
   const handleToggle = () => {
-    updateTask({...task, is_completed: !task.is_completed})
+    // updateTask({...task, is_completed: !task.is_completed})
   }
 
   return (

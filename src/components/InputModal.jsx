@@ -5,16 +5,15 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { useTaskContext } from "../contexts/TaskContext.jsx";
 import {useState, useEffect} from "react";
 import {useUIContext} from "../contexts/UIContext.jsx";
 
 export const InputModal = () => {
-	const {
-		addTask,
-		updateTask,
-		deleteTask
-	} = useTaskContext();
+	// const {
+	// 	addTask,
+	// 	updateTask,
+	// 	deleteTask
+	// } = useTaskContext();
 
 	const {
 		isOpen,
@@ -35,13 +34,13 @@ export const InputModal = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		if (currentAction === 'edit') {
-			updateTask({ ...selectedTask, text: input });
-		} else if (currentAction === 'add') {
-			addTask(input);
-		} else if (currentAction === 'delete') {
-			deleteTask(selectedTask.id);
-		}
+		// if (currentAction === 'edit') {
+		// 	updateTask({ ...selectedTask, text: input });
+		// } else if (currentAction === 'add') {
+		// 	addTask(input);
+		// } else if (currentAction === 'delete') {
+		// 	deleteTask(selectedTask.id);
+		// }
 
 		setIsOpen(false);
 	};
